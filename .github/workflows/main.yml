@@ -1,0 +1,22 @@
+name: Run Script Every 16 Hours
+
+on:
+  schedule:
+    - cron: '0 */16 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Start Codespace URL
+        run: |
+          #!/bin/bash
+          echo "Starting Codespace URL"
+          # Replace with the actual script to start your Codespace
+          # For example, if you have a script in your repository:
+          bash https://github.com/mrbateau/gaia/blob/main/start-codespace.sh
