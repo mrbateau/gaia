@@ -1,8 +1,8 @@
-name: Run Script Every 16 Hours
+name: Run Script Every 10 Hours
 
 on:
   schedule:
-    - cron: '0 */16 * * *'
+    - cron: '0 */10 * * *'
   workflow_dispatch:
 
 jobs:
